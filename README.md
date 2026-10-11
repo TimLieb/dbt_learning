@@ -1,15 +1,19 @@
-Welcome to your new dbt project!
+# Car Sales Data Warehouse — dbt & Snowflake
 
-### Using the starter project
+## Introduction
 
-Try running the following commands:
-- dbt run
-- dbt test
+This project is a personal data engineering learning project developed to build practical experience with **dbt, Snowflake, SQL and dimensional data modelling**. It supports my development from a Data Analyst towards a Data Engineer role by applying data engineering concepts to a real-world-style dataset.
 
+The project uses a car sales dataset retrieved from [Kaggle](https://www.kaggle.com/), which serves as the source for building a structured data warehouse. Using dbt and Snowflake, I am developing a series of data transformation models to prepare raw data for analytical consumption, with an emphasis on reusable transformations, data integrity and maintainable SQL.
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+The planned data warehouse design separates vehicle attributes from individual sales transactions through a dimensional model, consisting of a vehicle dimension and a sales fact table. This provides an opportunity to explore surrogate key generation, fact-to-dimension relationships, incremental processing and the principles behind designing reliable analytical data models.
+
+### Project objectives
+
+- **Data transformation:** Build modular, SQL-based transformation models using dbt's staging and downstream modelling capabilities.
+- **Dimensional modelling:** Design fact and dimension tables with clearly defined grains, surrogate keys and relationships.
+- **Data quality:** Identify and address inconsistencies in source data, apply appropriate data types and validate transformation outputs.
+- **Maintainability and reusability:** Use dbt's model dependencies and refactoring capabilities to create a structured, maintainable transformation pipeline.
+- **Version control:** Use Git and GitHub to track development, document design decisions and manage changes.
+
+This project is being developed iteratively as I
