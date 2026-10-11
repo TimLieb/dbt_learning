@@ -1,0 +1,10 @@
+SELECT
+    VIN,
+    STATE,
+    CONDITION,
+    ODOMETER,
+    SELLER,
+    SELLINGPRICE,
+    SALEDATETIME
+FROM
+    {{ref("car_sales_stg")}}
