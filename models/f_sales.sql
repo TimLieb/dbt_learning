@@ -1,9 +1,13 @@
 SELECT
-    VIN,
+    {{ dbt_utils.generate_surrogate_key([
+        'VIN'
+    ]) }} AS VEHICLE_KEY,
+    {{ dbt_utils.generate_surrogate_key([
+        'SELLER'
+    ]) }} AS SELLER_KEY,
     STATE,
     CONDITION,
     ODOMETER,
-    SELLER,
     SELLINGPRICE,
     SALEDATETIME
 FROM

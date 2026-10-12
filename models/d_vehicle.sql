@@ -1,4 +1,8 @@
 SELECT DISTINCT
+    {{ dbt_utils.generate_surrogate_key([
+        'VIN'
+    ]) }} AS VEHICLE_KEY,
+    VIN,
     YEAR,
     MAKE,
     MODEL,
