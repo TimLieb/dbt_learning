@@ -33,3 +33,5 @@ models:
       +materialized: table
     d_sellers:
       +materialized: table
+    d_vehicle_profile:
+      +materialized: table
