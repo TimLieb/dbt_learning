@@ -35,3 +35,7 @@ models:
       +materialized: table
     d_vehicle_profile:
       +materialized: table
+
+seeds:
+  dbt_learning:
+    +schema: L2_PROCESSING

@@ -1,7 +1,10 @@
 SELECT DISTINCT
     {{ dbt_utils.generate_surrogate_key([
-        'SELLER'
+        'CSS.SELLER'
     ]) }} AS SELLER_KEY,
-    SELLER
+    CSS.SELLER,
+    SP.PARENT_COMPANY
 FROM
-    {{ref("car_sales_stg")}}
+    {{ref("car_sales_stg")}} CSS
+LEFT JOIN {{ref("seller_parents")}} AS SP
+    ON CSS.SELLER = SP.SELLER
